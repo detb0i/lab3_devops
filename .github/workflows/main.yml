@@ -1,0 +1,14 @@
+name: Lab 3 GitHub Actions
+on:
+  push:
+    branches:
+      - main
+jobs:
+  hello_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting and repository info
+        run: |
+          echo "Hello from GitHub Actions!"
+          echo "Repository: ${{ github.repository }}"
+          echo "Run number: ${{ github.run_number }}"
